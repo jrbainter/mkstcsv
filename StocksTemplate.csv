@@ -1,0 +1,4 @@
+﻿Owner,Description,DtAcquired,DtSold,SalesPrice,Cost
+T,TaxPayer Owned,1/1/2005,10/10/2021,3000,4500
+S,Spouse Owned,1/1/2005,10/10/2021,3100,4550
+J,Jointly Owned,1/1/2005,10/10/2021,3200,4600
