@@ -1,0 +1,10 @@
+SL,ID,Cvrd,8949 Box,Close Date,Sec Type,Tax Class,Symbol,Security ID,CoT,Security Name,Open Date,Open ID,Units,Proceeds,Procds type,Calc Mthd,Cost,MD Gain Adj,Ordinary Gain/Loss,GainLoss 1099B,Term,Deferred loss,s1256 Unrealized Prior Period,s1256 Unrealized,s1256 Realized,s1256 Total,RecType,TrMethod,Settled,Recon Cost,Recon Proceeds,Close Tran Type,Elections,Rec Status,Rec Flags
+L,36589033113,C,A,08/04/2021,stock,stock,FCX,35671D857,US,FREEPORT-MCMORAN INC,08/03/2021,,100,3591.98,gross,,3667.57,,,-75.59,st,,,,,,sell,,08/06/2021,,,sell,,compliant,
+L,37388144179,C,A,09/15/2021,option,non-s1256,FB_Sep_17_2021_370.0_Put,,US,FB Sep 17 2021 370.0 Put,09/13/2021,,10,2463.36,gross,,1931.61,,,531.75,st,,,,,,sell,,09/16/2021,,,selltoclose,,compliant,
+L,35553743949,C,A,06/17/2021,option,non-s1256,X_Jun_18_2021_25.0_Put,,US,X Jun 18 2021 25.0 Put,04/09/2021,,10,1823.33,gross,,4616.64,,,-2793.31,st,,,,,,sell,,06/18/2021,,,selltoclose,,compliant,
+S,37850405541,C,A,10/06/2021,option,non-s1256,AAPL_Oct_15_2021_140.0_Call,,US,AAPL Oct 15 2021 140.0 Call,10/05/2021,,10,-923.23,net,,0,,,-923.23,st,,,,,,covershort,,10/06/2021,3196.6,,buytoclose,,compliant,
+L,38869563478,C,A,11/19/2021,option,non-s1256,SPY_Nov_19_2021_460.0_Put,,US,SPY Nov 19 2021 460.0 Put,11/15/2021,,10,0,gross,,556.59,,,-556.59,st,,,,,,expired,,11/19/2021,,,expirelong,,compliant,
+L,36978622918,C,A,08/25/2021,option,non-s1256,X_Sep_17_2021_28.0_Put,,US,X Sep 17 2021 28.0 Put,08/19/2021,,10,1713.36,gross,,2066.61,,,-353.25,st,,,,,,sell,,08/26/2021,,,selltoclose,,compliant,
+L,36753452691,C,A,08/12/2021,option,non-s1256,X_Sep_17_2021_26.0_Call,,US,X Sep 17 2021 26.0 Call,08/10/2021,,10,2693.36,gross,,2656.61,,,36.75,st,,,,,,sell,,08/13/2021,,,selltoclose,,compliant,
+L,36679174807,C,A,08/09/2021,option,non-s1256,X_Sep_17_2021_25.0_Call,,US,X Sep 17 2021 25.0 Call,08/05/2021,,10,3003.35,gross,,2356.61,,,646.74,st,,,,,,sell,,08/10/2021,,,selltoclose,,compliant,
+L,36837590379,C,A,08/17/2021,option,non-s1256,X_Sep_17_2021_29.0_Put,,US,X Sep 17 2021 29.0 Put,08/13/2021,,10,2423.36,gross,,2016.61,,,406.75,st,,,,,,sell,,08/18/2021,,,selltoclose,,compliant,
