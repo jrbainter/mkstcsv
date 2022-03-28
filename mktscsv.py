@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 
 import pdb
+import sys
 from enum import IntEnum
 
 #Input field numbers in .csv file
-class FDI(IntEnum):
-	description = 10
+class Fds(IntEnum):
+	descrip = 10
 	dtopen = 11
 	dtclose = 4
 	proceeds = 14
 	price = 17
 
 # Input field positions
-FDP = [10,11,4,14,17]
+#FDP = [10,11,4,14,17]
 
 # Header for output file.
 HDR = "Owner,Description,DtAcquired,DtSold,SalesPrice,Cost\n"
@@ -20,7 +21,7 @@ HDR = "Owner,Description,DtAcquired,DtSold,SalesPrice,Cost\n"
 OWNER = 'J'
 
 # Substitude text for a value of zero
-TSUB = "0.01"
+TSUB = "0"
 
 
 def get_filenames():
@@ -43,31 +44,29 @@ def shortdec(ldes):
 	st = ld[0]+" "+ld[len(ld)-1]
 	return st
 
-def mktscsv():
+def mktscsv(ifn,ofn):
 	""" This program is used to make a Tax Slayer .csv file
 	from a TDAmeritrade .csv file. The TDAmeritrade .xlsx file
 	is used to create the TDAneritrade .csv file by opening the
 	.xlsx filewith a spreadsheet ap[plication and then saving
 	the file as a .csv file.
 	"""
-#	ifn, ofn = "TestIn.csv", "TestOut.csv"
-	ifn, ofn = get_filenames()
 
 # Open files
 	try:
 		with open(ifn,'r') as infile, open(ofn, 'w') as outfile:
 			dh = infile.readline() # skip input file header line
-			lines = infile.readlines()
 			outfile.write(HDR) # write out file header
-			for line in lines:
+			for line in infile:
 				sl = line.split(',')
 				ol = []
 				ol.append(OWNER)
-				for fd in FDP:
-					value = sl[fd]
-					if fd == 10: value = shortdec(value)
-					if  (fd == 14 or fd == 17) and value == "0": value = TSUB
-					ol.append(value)
+				for fd in Fds:
+					data = sl[fd.value]
+					if fd.name == "descrip": data = shortdec(data)
+					if  (fd.name == "proceeds" or fd.name == "price")\
+						and data == "0": data = TSUB
+					ol.append(data)
 				outline = ",".join(ol)+'\n'
 				outfile.write(outline)
 
@@ -75,5 +74,14 @@ def mktscsv():
 		print("Error Opening ", str(e))
 
 
+
+
+
 if __name__ == "__main__":
-	mktscsv()
+
+	#  inf, outp = "TestIn.csv", "TestOut.csv"
+	if len(sys.argv) == 3:
+		mktscsv(sys.argv[1], sys.argv[2])
+	else:
+		mktscsv(get_filenames())
+
